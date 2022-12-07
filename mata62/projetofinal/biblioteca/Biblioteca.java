@@ -110,57 +110,54 @@ public class Biblioteca {
 
 
     public void inicializarPessoas() {
-		Usuario prof = new Professor(100, "Camilla Cabello");
-		usuarios.add(prof);
+        Usuario prof = new Professor(100, "Carlos Lucena");
+        usuarios.add(prof);
 
-		Usuario grad1 = new AlunoGraduacao(123, "Carlinhos Brown");
-		usuarios.add(grad1);
+        Usuario grad1 = new AlunoGraduacao(123, "João da Silva");
+        usuarios.add(grad1);
 
-		Usuario grad2 = new AlunoGraduacao(789, "Xuxa");
-		usuarios.add(grad2);
+        Usuario grad2 = new AlunoGraduacao(789, "Pedro Paulo");
+        usuarios.add(grad2);
 
-		Usuario pos = new AlunoPosGraduacao(456, "Djavan");
-		usuarios.add(pos);
+        Usuario pos = new AlunoPosGraduacao(456, "Luiz Fernando Rodrigues");
+        usuarios.add(pos);
 	}
 
     public void inicializarLivros() {
-		Livro b1 = new Livro(100, "2020", "Claudio Santanna", "Saraiva",
-				"6ª", 2, "Engenharia de Software");
-		livros.add(b1);
+        Livro b1 = new Livro(100, "2000", "Ian Sommervile", "AddisonWesley",
+                "6ª", 2, "Engenharia de Software");
+        livros.add(b1);
 
-		Livro b2 = new Livro(111, "2032", "Petcovic, Neymar, Richarlison",
-        "Hexa", "8ª", 1, "O futuro hexa vem aí");
-		livros.add(b2);
+        Livro b2 = new Livro(101, "2000", "Grady Booch, James Rumbaugh, Ivar Jacobson",
+                "Campus", "7ª", 1, "UML - Guia do Usuário");
+        livros.add(b2);
 
-		Livro b3 = new Livro(213, "2013", "Tiririca",
-        "Globo", "3ª", 3, "Ha! Ha! Ha!");
-		livros.add(b3);
+        Livro b3 = new Livro(200, "2014", "Steve McConnell",
+                "Microsoft Press", "2ª", 1, "Code Complete");
+        livros.add(b3);
 
-		Livro b4 = new Livro(290, "2022", "Ronaldo", "Bola de ouro",
-        "4ª", 2, "A copa de 2002");
-		livros.add(b4);
+        Livro b4 = new Livro(201, "2002", "Robert Martin", "Prentice Hall",
+                "1ª", 1, "Agile SoftwareDevelopment, Principles, Patterns, and Practices");
+        livros.add(b4);
 
-        Livro b5 = new Livro(300, "1977", "Fulano",
-                "Editora Fulano",  "3ª",  3,
-                "Fulano é legal");
+
+
+        Livro b5 = new Livro(300, "1999", "Martin Fowler",
+                "AddisonWesley Professional",  "1ª",  2,
+                "Refactoring: Improving the Design of Existing Code");
         livros.add(b5);
-		
-        Livro b6 = new Livro(329, "2021", "Cicrano",
-				"Cicrano Editora",  "89ª",  1,
-                "Cicrano é massa");
-		livros.add(b6);
 
-		Livro b7 = new Livro(490, "2017", "Pelé", "Campeão",
-         "2ª", 0, "Campeão 3 vezes");
-		livros.add(b7);
+        Livro b6 = new Livro(301, "2014", "Norman Fenton, James Bieman", "CRC Press",
+                "3ª", 0, "Software Metrics: A Rigorous and Practical Approach");
+        livros.add(b6);
 
-		Livro b8 = new Livro(400, "2000", "Caio O.",
-         "Trabalho de eng soft","2ª", 3, "Trabalho de Eng Soft");
-		livros.add(b8);
+        Livro b7 = new Livro(400, "1994", "Erich Gamma, Richard Helm, RalphJohnson, JohnVlissides",
+                "AddisonWesley Professional","1ª", 2, "Design Patterns: Elements of Reusable Object-Oriented Software");
+        livros.add(b7);
 
-		Livro b9 = new Livro(401, "2013", "Iago O.",
-         "Trabalho de Engsoft", "4ª", 3, "Trabalho de Eng Soft");
-		livros.add(b9);
+        Livro b8 = new Livro(401, "2003", "Martin Fowler",
+                "AddisonWesley Professional", "3ª", 2, "UML Distilled: A Brief Guide to the Standard Object Modeling Language");
+        livros.add(b8);
 	}
 
     public void addObservador(int idUsuario, int idLivro){
