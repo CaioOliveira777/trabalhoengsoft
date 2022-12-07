@@ -51,7 +51,7 @@ public abstract class Usuario {
 		if(getQuantidadeReservas() < limiteReservas){
             return true;
         }
-        System.out.println("RESERVA NAO REALIZADA. O USUARIO: " + getNome() + " JA ATINGIU O LIMITE DE :" + getQuantidadeReservas() + " RESERVAS.");
+        System.out.println("RESERVA NAO REALIZADA! O USUARIO: " + getNome() + " JA ATINGIU O LIMITE DE: " + getQuantidadeReservas() + " RESERVAS.");
         return false;
 	}
 
