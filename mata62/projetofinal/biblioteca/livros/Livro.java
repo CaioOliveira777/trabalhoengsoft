@@ -1,37 +1,42 @@
 package com.mata62.projetofinal.biblioteca.livros;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.mata62.projetofinal.biblioteca.usuarios.Usuario;
 import com.mata62.projetofinal.biblioteca.controles.Emprestimo;
 import com.mata62.projetofinal.biblioteca.controles.Reserva;
+import com.mata62.projetofinal.observador.Observador;
+import com.mata62.projetofinal.observador.Notificar;
 
 
-public class Livro {
-    int id;
-    String anoLancamento;
-    String autores;
-    String editora;
-    String edicao;
-    String titulo;
+public class Livro implements Notificar { //o livro é observado
+    private List<Observador> lista;//lista de notificações
+    private int id;
+    private String anoLancamento;
+    private String autores;
+    private String editora;
+    private String edicao;
+    private String titulo;
 
-    ArrayList<Exemplar> exemplares;
-    ArrayList<Reserva> reservas;
+    private ArrayList<Exemplar> exemplares;
+    private ArrayList<Reserva> reservas;
 
     public Livro(int id, String anoLancamento, String autores,
      String editora, String edicao, int numeroExemplares, String titulo){
+        this.lista = new ArrayList<>();//lista de notificações
         this.id = id;
         this.anoLancamento = anoLancamento;
         this.autores = autores;
         this.editora = editora;
         this.edicao = edicao;
-        this.exemplares = new ArrayList<Exemplar>();
+        this.exemplares = new ArrayList<Exemplar>();//lista dos exemplares do mesmo livro
         for (int i = 0; i <= numeroExemplares; i++) {
             Exemplar exemplar = new Exemplar(i, this);
             this.exemplares.add(exemplar);
         }
         this.titulo = titulo;
-        this.reservas = new ArrayList<Reserva>();
+        this.reservas = new ArrayList<Reserva>();//lista de reservas do livro
     }
 
     public int getId() {
@@ -44,6 +49,10 @@ public class Livro {
 
     public void adicionarReserva(Reserva r) {
         reservas.add(r);
+        if (obterReservasAtivas().size() > 1){
+            notificar(this);//notifica o prof se houver mais de duas reservas ativas
+        }
+
     }
 
     public int getQuantidadeReservas() {
@@ -137,8 +146,20 @@ public class Livro {
             Emprestimo emprestimo = exemplar.getEmprestimo();
             Usuario usuarioEmprestimo = emprestimo.getUsuario();
             System.out.println(exemplar.getId() + " PARA: " + usuarioEmprestimo.getNome() +
-             " DATA EMPRESTIMO: " + emprestimo.getDataEmprestimo() + " DATA DEVOLUCAO ESPERADA: " + 
+             " - DATA EMPRESTIMO: " + emprestimo.getDataEmprestimo() + " - DATA DEVOLUCAO ESPERADA: " +
              emprestimo.dataDevolucaoEsperada());
         }
     }
+
+    @Override
+    public void addObservador(Observador obs) {
+        lista.add(obs);
+    } //add livro observado na lista
+
+
+    @Override
+    public void notificar(Livro livro) {
+        lista.forEach(o -> o.atualizar());
+    }
+
 }

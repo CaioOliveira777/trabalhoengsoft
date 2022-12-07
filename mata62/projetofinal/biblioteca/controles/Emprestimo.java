@@ -7,11 +7,11 @@ import com.mata62.projetofinal.biblioteca.usuarios.Usuario;
 
 
 public class Emprestimo {
-    Usuario usuario;
-    Exemplar exemplar;
-    boolean ativo;
-    LocalDate dataEmprestimo;
-    LocalDate dataDevolucao;
+    private Usuario usuario;
+    private Exemplar exemplar;
+    private boolean ativo;
+    private LocalDate dataEmprestimo;
+    private LocalDate dataDevolucao;
 
 
     public Emprestimo(Usuario usuario, Exemplar exemplar){

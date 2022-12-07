@@ -10,17 +10,18 @@ import com.mata62.projetofinal.biblioteca.controles.Emprestimo;
 import com.mata62.projetofinal.biblioteca.controles.Reserva;
 
 public abstract class Usuario {
-    CompEmprestimo comportamentoEmprestimo;
+    protected CompEmprestimo comportamentoEmprestimo;
 
-    int id;
-    String nome;
+    protected int id;
+    protected String nome;
 
-    int limiteDiasEmprestimo;
-    int limiteReservas;
-    int limiteEmprestimos;
+    protected int limiteDiasEmprestimo;
+    protected int limiteReservas;
+    protected int limiteEmprestimos;
 
-    List<Emprestimo> emprestimos;
-    List<Reserva> reservas;
+    protected List<Emprestimo> emprestimos;
+    protected List<Reserva> reservas;
+
 
     public int getLimiteEmprestimos() {
         return limiteEmprestimos;
@@ -156,7 +157,7 @@ public abstract class Usuario {
                 if (dataFechamento != null){
                     dataFechamentoTxt = dataFechamento.toString();
                 }
-                System.out.println("TITULO: " + titulo + " - DATA SOLICITACAO: "+ dataReserva + " - DATA FECHAMENTO: " + dataFechamentoTxt);
+                System.out.println("TÍTULO: " + titulo + " - DATA SOLICITAÇÃO: "+ dataReserva + " - DATA FECHAMENTO: " + dataFechamentoTxt);
             }
         
 		}

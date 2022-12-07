@@ -10,7 +10,7 @@ public class EmpProfessor implements CompEmprestimo{
         if (!usuario.estaDevedor()){
             return true;
         }else {
-            System.out.println("NAO FOI POSSIVEL EMPRESTAR O LIVRO: " + livro.getTitulo() + " PARA O: " + usuario.getNome() + "POIS ELE É UM CALOTEIRO SAFADO");
+            System.out.println("NAO FOI POSSIVEL EMPRESTAR O LIVRO: " + livro.getTitulo() + " PARA O: " + usuario.getNome() + " ,POIS USUÁRIO É DEVEDOR");
             return false;
         }
     }
