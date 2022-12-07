@@ -15,14 +15,14 @@ public class Console {
 
 	public void inicializarComandos() {
 
-		comandos.put("dev", new ComandoDev());
+		comandos.put("usu", new ComandoUsu());
 		comandos.put("emp", new ComandoEmp());
 		comandos.put("liv", new ComandoLiv());
-		comandos.put("res", new ComandoRes());
 		comandos.put("sai", new ComandoSai());
-		comandos.put("usu", new ComandoUsu());
 		comandos.put("obs", new ComandoObs());
 		comandos.put("nft", new ComandoNft());
+		comandos.put("dev", new ComandoDev());
+		comandos.put("res", new ComandoRes());
 	}
 
 	public void service(List<String> input, String instru) {

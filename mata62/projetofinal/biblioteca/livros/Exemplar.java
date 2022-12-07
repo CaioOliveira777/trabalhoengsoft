@@ -3,9 +3,9 @@ package com.mata62.projetofinal.biblioteca.livros;
 import com.mata62.projetofinal.biblioteca.controles.Emprestimo;
 
 public class Exemplar {
-    int id;
-    Emprestimo emprestimo;
-    Livro livro;
+    private int id;
+    private Emprestimo emprestimo;
+    private Livro livro;
 
     public Exemplar(int id, Livro livro) {
         this.id = id;

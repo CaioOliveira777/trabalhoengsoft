@@ -10,17 +10,17 @@ import com.mata62.projetofinal.biblioteca.controles.Emprestimo;
 import com.mata62.projetofinal.biblioteca.controles.Reserva;
 
 public abstract class Usuario {
-    CompEmprestimo comportamentoEmprestimo;
+    protected CompEmprestimo comportamentoEmprestimo;
 
-    int id;
+    protected int id;
     String nome;
 
-    int limiteDiasEmprestimo;
-    int limiteReservas;
-    int limiteEmprestimos;
+    protected int limiteDiasEmprestimo;
+    protected int limiteReservas;
+    protected int limiteEmprestimos;
 
-    List<Emprestimo> emprestimos;
-    List<Reserva> reservas;
+    protected List<Emprestimo> emprestimos;
+    protected List<Reserva> reservas;
 
 
     public int getLimiteEmprestimos() {

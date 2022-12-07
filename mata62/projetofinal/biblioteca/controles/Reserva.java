@@ -6,10 +6,10 @@ import com.mata62.projetofinal.biblioteca.livros.Livro;
 import java.time.LocalDate;
 
 public class Reserva {
-    Usuario usuario;
-    Livro livro;
-    LocalDate dataFechamento;
-    LocalDate dataReserva;
+    private Usuario usuario;
+    private Livro livro;
+    private LocalDate dataFechamento;
+    private LocalDate dataReserva;
 
     public Reserva(
         Usuario usuario, Livro livro

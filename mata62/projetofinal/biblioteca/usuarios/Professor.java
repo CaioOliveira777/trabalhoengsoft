@@ -8,7 +8,7 @@ import com.mata62.projetofinal.biblioteca.controles.Reserva;
 import com.mata62.projetofinal.observador.Observador;
 
 public class Professor extends Usuario implements Observador {
-    int contador;
+    private int contador;
     public Professor(int id, String nome){
         this.comportamentoEmprestimo = new EmpProfessor();
         this.id = id;
@@ -23,7 +23,7 @@ public class Professor extends Usuario implements Observador {
     @Override
     public void atualizar() {
         contador++;
-        System.out.println("NOTIFICACAO");
+        System.out.println("VOCE ESTA SENDO NOTIFICADO(A) DE UMA NOVA RESERVA");
     }
 
     @Override

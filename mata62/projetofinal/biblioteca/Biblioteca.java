@@ -77,6 +77,8 @@ public class Biblioteca {
         }
     }
 
+
+
     public void emprestar(int idUsuario, int idLivro) {
         Usuario usuario = obterUsuarioPeloId(idUsuario);
         Livro livro = obterLivroPeloId(idLivro);

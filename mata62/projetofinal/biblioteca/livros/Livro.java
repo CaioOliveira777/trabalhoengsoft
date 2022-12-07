@@ -11,13 +11,13 @@ import com.mata62.projetofinal.observador.Notificar;
 
 
 public class Livro implements Notificar {
-    List<Observador> lista;
-    int id;
-    String anoLancamento;
-    String autores;
-    String editora;
-    String edicao;
-    String titulo;
+    private List<Observador> lista;
+    private int id;
+    private String anoLancamento;
+    private String autores;
+    private String editora;
+    private String edicao;
+    private String titulo;
 
     ArrayList<Exemplar> exemplares;
     ArrayList<Reserva> reservas;
