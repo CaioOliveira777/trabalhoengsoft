@@ -18,7 +18,6 @@ public class Main {
                 List<String> input = Arrays.asList(scanner.nextLine().split(" "));
                 
                 String instru = input.get(0);
-                
                 console.service(input, instru);
             }
         }

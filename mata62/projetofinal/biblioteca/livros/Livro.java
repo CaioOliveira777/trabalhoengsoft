@@ -10,8 +10,8 @@ import com.mata62.projetofinal.observador.Observador;
 import com.mata62.projetofinal.observador.Notificar;
 
 
-public class Livro implements Notificar {
-    private List<Observador> lista;
+public class Livro implements Notificar { //o livro é observado
+    private List<Observador> lista;//lista de notificações
     private int id;
     private String anoLancamento;
     private String autores;
@@ -24,19 +24,19 @@ public class Livro implements Notificar {
 
     public Livro(int id, String anoLancamento, String autores,
      String editora, String edicao, int numeroExemplares, String titulo){
-        this.lista = new ArrayList<>();
+        this.lista = new ArrayList<>();//lista de notificações
         this.id = id;
         this.anoLancamento = anoLancamento;
         this.autores = autores;
         this.editora = editora;
         this.edicao = edicao;
-        this.exemplares = new ArrayList<Exemplar>();
+        this.exemplares = new ArrayList<Exemplar>();//lista dos exemplares do mesmo livro
         for (int i = 0; i <= numeroExemplares; i++) {
             Exemplar exemplar = new Exemplar(i, this);
             this.exemplares.add(exemplar);
         }
         this.titulo = titulo;
-        this.reservas = new ArrayList<Reserva>();
+        this.reservas = new ArrayList<Reserva>();//lista de reservas do livro
     }
 
     public int getId() {
@@ -50,7 +50,7 @@ public class Livro implements Notificar {
     public void adicionarReserva(Reserva r) {
         reservas.add(r);
         if (obterReservasAtivas().size() > 1){
-            notificar(this);
+            notificar(this);//notifica o prof se houver mais de duas reservas ativas
         }
 
     }
@@ -154,7 +154,7 @@ public class Livro implements Notificar {
     @Override
     public void addObservador(Observador obs) {
         lista.add(obs);
-    }
+    } //add livro observado na lista
 
 
     @Override
