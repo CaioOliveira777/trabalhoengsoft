@@ -1,4 +1,4 @@
-package com.mata62.projetofinal.observador;
+package com.mata62.projetofinal;
 
 public interface Observador {
 

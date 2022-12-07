@@ -5,8 +5,6 @@ import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import com.mata62.projetofinal.ihc.Console;
-
 public class Main {
 
     public static void main(String[] args) throws UnsupportedEncodingException {

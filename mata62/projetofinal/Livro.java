@@ -1,13 +1,7 @@
-package com.mata62.projetofinal.biblioteca.livros;
+package com.mata62.projetofinal;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.mata62.projetofinal.biblioteca.usuarios.Usuario;
-import com.mata62.projetofinal.biblioteca.controles.Emprestimo;
-import com.mata62.projetofinal.biblioteca.controles.Reserva;
-import com.mata62.projetofinal.observador.Observador;
-import com.mata62.projetofinal.observador.Notificar;
 
 
 public class Livro implements Notificar {

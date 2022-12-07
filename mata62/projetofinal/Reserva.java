@@ -1,7 +1,7 @@
-package com.mata62.projetofinal.biblioteca.controles;
+package com.mata62.projetofinal;
 
-import com.mata62.projetofinal.biblioteca.usuarios.Usuario;
-import com.mata62.projetofinal.biblioteca.livros.Livro;
+import com.mata62.projetofinal.Usuario;
+import com.mata62.projetofinal.Livro;
 
 import java.time.LocalDate;
 

@@ -1,9 +1,9 @@
-package com.mata62.projetofinal.biblioteca.controles;
+package com.mata62.projetofinal;
 
 import java.time.LocalDate;
 
-import com.mata62.projetofinal.biblioteca.livros.Exemplar;
-import com.mata62.projetofinal.biblioteca.usuarios.Usuario;
+import com.mata62.projetofinal.Exemplar;
+import com.mata62.projetofinal.Usuario;
 
 
 public class Emprestimo {

@@ -1,10 +1,8 @@
-package com.mata62.projetofinal.ihc.comandos;
-
-import com.mata62.projetofinal.biblioteca.Biblioteca;
+package com.mata62.projetofinal;
 
 import java.util.List;
 
-public class ComandoObs implements Comando{
+public class ComandoDev implements Comando {
 
     @Override
     public void execute(List<String> args) {
@@ -12,7 +10,8 @@ public class ComandoObs implements Comando{
 
         int idUsuario = Integer.parseInt(args.get(1));
         int idLivro = Integer.parseInt(args.get(2));
-
-        biblioteca.addObservador(idUsuario, idLivro);
+        
+        biblioteca.devolver(idUsuario, idLivro);
     }
+    
 }

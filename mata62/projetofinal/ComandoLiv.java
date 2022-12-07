@@ -1,7 +1,6 @@
-package com.mata62.projetofinal.ihc.comandos;
+package com.mata62.projetofinal;
 
 import java.util.List;
-import com.mata62.projetofinal.biblioteca.Biblioteca;
 
 public class ComandoLiv implements Comando {
 

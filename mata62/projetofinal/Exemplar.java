@@ -1,6 +1,4 @@
-package com.mata62.projetofinal.biblioteca.livros;
-
-import com.mata62.projetofinal.biblioteca.controles.Emprestimo;
+package com.mata62.projetofinal;
 
 public class Exemplar {
     private int id;

@@ -1,6 +1,4 @@
-package com.mata62.projetofinal.observador;
-
-import com.mata62.projetofinal.biblioteca.livros.Livro;
+package com.mata62.projetofinal;
 
 public interface Notificar {
     public void addObservador(Observador obs);

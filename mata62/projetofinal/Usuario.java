@@ -1,13 +1,7 @@
-package com.mata62.projetofinal.biblioteca.usuarios;
+package com.mata62.projetofinal;
 
 import java.time.LocalDate;
 import java.util.List;
-
-import com.mata62.projetofinal.biblioteca.usuarios.comportamento.emprestimo.CompEmprestimo;
-
-import com.mata62.projetofinal.biblioteca.livros.Livro;
-import com.mata62.projetofinal.biblioteca.controles.Emprestimo;
-import com.mata62.projetofinal.biblioteca.controles.Reserva;
 
 public abstract class Usuario {
     protected CompEmprestimo comportamentoEmprestimo;

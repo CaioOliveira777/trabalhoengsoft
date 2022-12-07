@@ -1,16 +1,17 @@
-package com.mata62.projetofinal.ihc.comandos;
+package com.mata62.projetofinal;
 
 import java.util.List;
-import com.mata62.projetofinal.biblioteca.Biblioteca;
 
-public class ComandoUsu implements Comando {
+public class ComandoRes implements Comando {
 
     @Override
     public void execute(List<String> args) {
         Biblioteca biblioteca = Biblioteca.obterInstancia();
 
         int idUsuario = Integer.parseInt(args.get(1));
+        int idLivro = Integer.parseInt(args.get(2));
         
-        biblioteca.exibirDadosUsuario(idUsuario);
+        biblioteca.reservar(idUsuario, idLivro);
     }
 }
+

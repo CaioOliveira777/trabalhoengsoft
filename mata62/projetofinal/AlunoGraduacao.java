@@ -1,11 +1,8 @@
-package com.mata62.projetofinal.biblioteca.usuarios;
+package com.mata62.projetofinal;
 
 import java.util.ArrayList;
-import com.mata62.projetofinal.biblioteca.usuarios.comportamento.emprestimo.EmpAlunoGraduacao;
-import com.mata62.projetofinal.biblioteca.controles.Emprestimo;
-import com.mata62.projetofinal.biblioteca.controles.Reserva;
 
-public class AlunoGraduacao extends Usuario{
+public class AlunoGraduacao extends Usuario {
     public AlunoGraduacao(int id, String nome){
         this.comportamentoEmprestimo = new EmpAlunoGraduacao();
         this.id = id;

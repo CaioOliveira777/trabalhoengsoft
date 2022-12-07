@@ -1,16 +1,6 @@
-package com.mata62.projetofinal.biblioteca;
+package com.mata62.projetofinal;
 
 import java.util.ArrayList;
-
-import com.mata62.projetofinal.biblioteca.controles.Emprestimo;
-import com.mata62.projetofinal.biblioteca.controles.Reserva;
-import com.mata62.projetofinal.biblioteca.livros.Exemplar;
-import com.mata62.projetofinal.biblioteca.livros.Livro;
-import com.mata62.projetofinal.biblioteca.usuarios.Usuario;
-import com.mata62.projetofinal.biblioteca.usuarios.AlunoGraduacao;
-import com.mata62.projetofinal.biblioteca.usuarios.AlunoPosGraduacao;
-import com.mata62.projetofinal.biblioteca.usuarios.Professor;
-import com.mata62.projetofinal.observador.Observador;
 
 public class Biblioteca {
     private static Biblioteca instancia;

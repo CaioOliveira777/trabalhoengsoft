@@ -1,9 +1,7 @@
-package com.mata62.projetofinal.ihc;
+package com.mata62.projetofinal;
 
 import java.util.List;
 import java.util.HashMap;
-
-import com.mata62.projetofinal.ihc.comandos.*;
 
 public class Console {
 

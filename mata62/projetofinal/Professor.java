@@ -1,11 +1,6 @@
-package com.mata62.projetofinal.biblioteca.usuarios;
+package com.mata62.projetofinal;
 
 import java.util.ArrayList;
-
-import com.mata62.projetofinal.biblioteca.usuarios.comportamento.emprestimo.EmpProfessor;
-import com.mata62.projetofinal.biblioteca.controles.Emprestimo;
-import com.mata62.projetofinal.biblioteca.controles.Reserva;
-import com.mata62.projetofinal.observador.Observador;
 
 public class Professor extends Usuario implements Observador {
     private int contador;

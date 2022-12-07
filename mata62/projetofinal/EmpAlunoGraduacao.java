@@ -1,9 +1,7 @@
-package com.mata62.projetofinal.biblioteca.usuarios.comportamento.emprestimo;
+package com.mata62.projetofinal;
 
-import com.mata62.projetofinal.biblioteca.livros.Livro;
-import com.mata62.projetofinal.biblioteca.usuarios.Usuario;
+public class EmpAlunoGraduacao implements CompEmprestimo {
 
-public class EmpAlunoPosGraduacao implements CompEmprestimo{
 
     @Override
     public boolean podePegar(Usuario usuario, Livro livro) {
@@ -34,3 +32,4 @@ public class EmpAlunoPosGraduacao implements CompEmprestimo{
         }
     }
 }
+

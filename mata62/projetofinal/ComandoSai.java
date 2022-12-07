@@ -1,4 +1,6 @@
-package com.mata62.projetofinal.ihc.comandos;
+package com.mata62.projetofinal;
+
+import com.mata62.projetofinal.Comando;
 
 import java.util.List;
 
