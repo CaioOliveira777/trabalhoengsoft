@@ -6,12 +6,12 @@ import java.util.List;
 import com.mata62.projetofinal.biblioteca.usuarios.Usuario;
 import com.mata62.projetofinal.biblioteca.controles.Emprestimo;
 import com.mata62.projetofinal.biblioteca.controles.Reserva;
-import com.mata62.projetofinal.observer.Observer;
-import com.mata62.projetofinal.observer.Subject;
+import com.mata62.projetofinal.observador.Observador;
+import com.mata62.projetofinal.observador.Notificar;
 
 
-public class Livro implements Subject {
-    List<Observer> lista;
+public class Livro implements Notificar {
+    List<Observador> lista;
     int id;
     String anoLancamento;
     String autores;
@@ -50,7 +50,7 @@ public class Livro implements Subject {
     public void adicionarReserva(Reserva r) {
         reservas.add(r);
         if (obterReservasAtivas().size() > 1){
-            notifyAll(this);
+            notificar(this);
         }
 
     }
@@ -146,20 +146,20 @@ public class Livro implements Subject {
             Emprestimo emprestimo = exemplar.getEmprestimo();
             Usuario usuarioEmprestimo = emprestimo.getUsuario();
             System.out.println(exemplar.getId() + " PARA: " + usuarioEmprestimo.getNome() +
-             " DATA EMPRESTIMO: " + emprestimo.getDataEmprestimo() + " DATA DEVOLUCAO ESPERADA: " + 
+             " - DATA EMPRESTIMO: " + emprestimo.getDataEmprestimo() + " - DATA DEVOLUCAO ESPERADA: " +
              emprestimo.dataDevolucaoEsperada());
         }
     }
 
     @Override
-    public void addObserver(Observer obs) {
+    public void addObservador(Observador obs) {
         lista.add(obs);
     }
 
 
     @Override
-    public void notifyAll(Livro livro) {
-        lista.forEach(o -> o.update());
+    public void notificar(Livro livro) {
+        lista.forEach(o -> o.atualizar());
     }
 
 }

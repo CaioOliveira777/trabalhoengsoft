@@ -2,13 +2,12 @@ package com.mata62.projetofinal.biblioteca.usuarios;
 
 import java.util.ArrayList;
 
-import com.mata62.projetofinal.biblioteca.livros.Livro;
 import com.mata62.projetofinal.biblioteca.usuarios.comportamento.emprestimo.EmpProfessor;
 import com.mata62.projetofinal.biblioteca.controles.Emprestimo;
 import com.mata62.projetofinal.biblioteca.controles.Reserva;
-import com.mata62.projetofinal.observer.Observer;
+import com.mata62.projetofinal.observador.Observador;
 
-public class Professor extends Usuario implements Observer {
+public class Professor extends Usuario implements Observador {
     int contador;
     public Professor(int id, String nome){
         this.comportamentoEmprestimo = new EmpProfessor();
@@ -22,7 +21,7 @@ public class Professor extends Usuario implements Observer {
     }
 
     @Override
-    public void update() {
+    public void atualizar() {
         contador++;
         System.out.println("NOTIFICACAO");
     }
