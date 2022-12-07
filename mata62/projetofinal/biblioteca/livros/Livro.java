@@ -19,8 +19,8 @@ public class Livro implements Notificar {
     private String edicao;
     private String titulo;
 
-    ArrayList<Exemplar> exemplares;
-    ArrayList<Reserva> reservas;
+    private ArrayList<Exemplar> exemplares;
+    private ArrayList<Reserva> reservas;
 
     public Livro(int id, String anoLancamento, String autores,
      String editora, String edicao, int numeroExemplares, String titulo){
