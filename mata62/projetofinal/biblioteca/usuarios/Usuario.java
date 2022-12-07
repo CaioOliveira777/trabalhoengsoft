@@ -8,6 +8,7 @@ import com.mata62.projetofinal.biblioteca.usuarios.comportamento.emprestimo.Comp
 import com.mata62.projetofinal.biblioteca.livros.Livro;
 import com.mata62.projetofinal.biblioteca.controles.Emprestimo;
 import com.mata62.projetofinal.biblioteca.controles.Reserva;
+import com.mata62.projetofinal.observer.Observer;
 
 public abstract class Usuario {
     CompEmprestimo comportamentoEmprestimo;
@@ -21,6 +22,7 @@ public abstract class Usuario {
 
     List<Emprestimo> emprestimos;
     List<Reserva> reservas;
+
 
     public int getLimiteEmprestimos() {
         return limiteEmprestimos;

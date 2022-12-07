@@ -21,6 +21,8 @@ public class Console {
 		comandos.put("res", new ComandoRes());
 		comandos.put("sai", new ComandoSai());
 		comandos.put("usu", new ComandoUsu());
+		comandos.put("ob", new ComandoObs());
+		comandos.put("nft", new ComandoNft());
 	}
 
 	public void service(List<String> input, String instru) {

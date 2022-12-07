@@ -1,13 +1,17 @@
 package com.mata62.projetofinal.biblioteca.livros;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.mata62.projetofinal.biblioteca.usuarios.Usuario;
 import com.mata62.projetofinal.biblioteca.controles.Emprestimo;
 import com.mata62.projetofinal.biblioteca.controles.Reserva;
+import com.mata62.projetofinal.observer.Observer;
+import com.mata62.projetofinal.observer.Subject;
 
 
-public class Livro {
+public class Livro implements Subject {
+    List<Observer> lista;
     int id;
     String anoLancamento;
     String autores;
@@ -20,6 +24,7 @@ public class Livro {
 
     public Livro(int id, String anoLancamento, String autores,
      String editora, String edicao, int numeroExemplares, String titulo){
+        this.lista = new ArrayList<>();
         this.id = id;
         this.anoLancamento = anoLancamento;
         this.autores = autores;
@@ -44,6 +49,10 @@ public class Livro {
 
     public void adicionarReserva(Reserva r) {
         reservas.add(r);
+        if (obterReservasAtivas().size() > 1){
+            notifyAll(this);
+        }
+
     }
 
     public int getQuantidadeReservas() {
@@ -141,4 +150,16 @@ public class Livro {
              emprestimo.dataDevolucaoEsperada());
         }
     }
+
+    @Override
+    public void addObserver(Observer obs) {
+        lista.add(obs);
+    }
+
+
+    @Override
+    public void notifyAll(Livro livro) {
+        lista.forEach(o -> o.update());
+    }
+
 }

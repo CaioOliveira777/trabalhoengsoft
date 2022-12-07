@@ -10,6 +10,8 @@ import com.mata62.projetofinal.biblioteca.usuarios.Usuario;
 import com.mata62.projetofinal.biblioteca.usuarios.AlunoGraduacao;
 import com.mata62.projetofinal.biblioteca.usuarios.AlunoPosGraduacao;
 import com.mata62.projetofinal.biblioteca.usuarios.Professor;
+import com.mata62.projetofinal.observer.Observer;
+import com.mata62.projetofinal.observer.Subject;
 
 public class Biblioteca {
     private static Biblioteca instancia;
@@ -157,4 +159,13 @@ public class Biblioteca {
 		livros.add(b8);
 	}
 
+    public void addObservador(int idUsuario, int idLivro){
+        obterLivroPeloId(idLivro).addObserver((Observer) obterUsuarioPeloId(idUsuario));
+
+    }
+
+    public void nftObservador(int idUsuario){
+       Observer ob = (Observer) obterUsuarioPeloId(idUsuario);
+       System.out.println("TOTAL DE NOTIFICAÇÔES" + ob.totalDeNotificacoes());
+    }
 }
