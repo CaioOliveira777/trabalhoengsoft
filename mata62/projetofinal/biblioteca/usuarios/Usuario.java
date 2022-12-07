@@ -13,7 +13,7 @@ public abstract class Usuario {
     protected CompEmprestimo comportamentoEmprestimo;
 
     protected int id;
-    String nome;
+    protected String nome;
 
     protected int limiteDiasEmprestimo;
     protected int limiteReservas;
